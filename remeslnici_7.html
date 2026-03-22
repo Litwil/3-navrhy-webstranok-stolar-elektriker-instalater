@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remeselníci – Ukážkové Bloky</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #0f0f0f;
+    color: #fff;
+  }
+
+  /* ===== SECTION LABEL ===== */
+  .section-label {
+    text-align: center;
+    padding: 60px 20px 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 6px;
+    color: #666;
+    text-transform: uppercase;
+  }
+
+  /* =========================================
+     BLOK 1 – STOLÁR
+     Estetika: teplá, prírodná, drevená
+  ========================================= */
+  .stolar-section {
+    background: #1a1208;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stolar-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      repeating-linear-gradient(
+        92deg,
+        transparent,
+        transparent 80px,
+        rgba(139,90,43,0.04) 80px,
+        rgba(139,90,43,0.04) 81px
+      ),
+      repeating-linear-gradient(
+        180deg,
+        transparent,
+        transparent 120px,
+        rgba(139,90,43,0.03) 120px,
+        rgba(139,90,43,0.03) 121px
+      );
+    pointer-events: none;
+  }
+
+  .stolar-left {
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .stolar-badge {
+    display: inline-block;
+    background: #8B5A2B;
+    color: #f5e6d0;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    margin-bottom: 32px;
+    width: fit-content;
+  }
+
+  .stolar-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 6vw, 88px);
+    font-weight: 900;
+    line-height: 0.95;
+    color: #f5e6d0;
+    margin-bottom: 8px;
+  }
+
+  .stolar-title span {
+    color: #8B5A2B;
+    font-style: italic;
+  }
+
+  .stolar-subtitle {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: #a08060;
+    margin-bottom: 40px;
+    margin-top: 16px;
+  }
+
+  .stolar-desc {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #c9a87c;
+    max-width: 420px;
+    margin-bottom: 48px;
+  }
+
+  .stolar-services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+    max-width: 420px;
+  }
+
+  .stolar-service-item {
+    border-left: 2px solid #8B5A2B;
+    padding-left: 14px;
+  }
+
+  .stolar-service-item strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #f5e6d0;
+    margin-bottom: 3px;
+  }
+
+  .stolar-service-item span {
+    font-size: 12px;
+    color: #7a6050;
+  }
+
+  .stolar-cta {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .btn-wood {
+    background: #8B5A2B;
+    color: #f5e6d0;
+    border: none;
+    padding: 16px 36px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .btn-wood:hover {
+    background: #a06835;
+    transform: translateY(-2px);
+  }
+
+  .btn-ghost-wood {
+    color: #8B5A2B;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-bottom: 1px solid #8B5A2B;
+    padding-bottom: 2px;
+    transition: color 0.3s;
+  }
+
+  .stolar-right {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stolar-visual {
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(ellipse at 30% 50%, rgba(139,90,43,0.25) 0%, transparent 60%),
+      linear-gradient(135deg, #2a1a08 0%, #1a1208 50%, #0f0a04 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .wood-icon-large {
+    font-size: 180px;
+    opacity: 0.12;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .stolar-stats {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 40px;
+    z-index: 2;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #8B5A2B;
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #7a6050;
+  }
+
+  .stolar-card {
+    background: rgba(26,18,8,0.9);
+    border: 1px solid rgba(139,90,43,0.3);
+    padding: 32px;
+    max-width: 280px;
+    backdrop-filter: blur(10px);
+  }
+
+  .stolar-card-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #f5e6d0;
+    margin-bottom: 6px;
+  }
+
+  .stolar-card-title {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #8B5A2B;
+    margin-bottom: 16px;
+  }
+
+  .stolar-card-quote {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #c9a87c;
+    line-height: 1.6;
+  }
+
+  /* =========================================
+     BLOK 2 – ELEKTRIKÁR
+     Estetika: industriálna, čistá, technická
+  ========================================= */
+  .elektrikar-section {
+    background: #03070f;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .elektrikar-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 70% 30%, rgba(0,150,255,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .elektrikar-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(rgba(0,100,200,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,100,200,0.06) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .elektrikar-top {
+    padding: 80px 80px 40px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .elektrikar-logo-area {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .elektrikar-bolt {
+    width: 48px;
+    height: 48px;
+    background: #0066ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    clip-path: polygon(50% 0%, 100% 40%, 60% 40%, 100% 100%, 0% 60%, 40% 60%);
+    animation: pulse-bolt 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-bolt {
+    0%, 100% { opacity: 1; box-shadow: 0 0 20px rgba(0,102,255,0.5); }
+    50% { opacity: 0.7; box-shadow: 0 0 40px rgba(0,102,255,0.8); }
+  }
+
+  .elektrikar-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 3px;
+    color: #fff;
+  }
+
+  .elektrikar-brand small {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #0066ff;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .elektrikar-nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .elektrikar-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .elektrikar-nav a:hover { color: #0066ff; }
+
+  .btn-electric {
+    background: #0066ff;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  }
+
+  .btn-electric:hover {
+    background: #0052cc;
+    box-shadow: 0 0 30px rgba(0,102,255,0.4);
+  }
+
+  .elektrikar-hero {
+    padding: 0 80px 80px;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .elektrikar-hero-text {
+    flex: 1;
+  }
+
+  .elektrikar-eyebrow {
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: #0066ff;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .elektrikar-eyebrow::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: #0066ff;
+  }
+
+  .elektrikar-h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(64px, 8vw, 120px);
+    line-height: 1.05;
+    color: #fff;
+    margin-bottom: 32px;
+    letter-spacing: 2px;
+  }
+
+  .elektrikar-h1 .accent {
+    color: #0066ff;
+    text-shadow: 0 0 40px rgba(0,102,255,0.5);
+  }
+
+  .elektrikar-desc {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #4a7ab5;
+    max-width: 440px;
+    margin-bottom: 48px;
+  }
+
+  .elektrikar-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(0,100,200,0.15);
+    max-width: 500px;
+    margin-bottom: 48px;
+  }
+
+  .elek-service {
+    background: rgba(3,7,15,0.9);
+    padding: 20px 16px;
+    position: relative;
+    transition: background 0.3s;
+  }
+
+  .elek-service:hover {
+    background: rgba(0,102,255,0.1);
+  }
+
+  .elek-service-icon {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .elek-service-name {
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0.5px;
+  }
+
+  .elek-service-tag {
+    font-size: 10px;
+    color: #0066ff;
+    letter-spacing: 1px;
+  }
+
+  .elektrikar-hero-right {
+    flex: 0 0 380px;
+  }
+
+  .elektrikar-card {
+    border: 1px solid rgba(0,102,255,0.2);
+    background: rgba(0,20,50,0.6);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+  }
+
+  .elektrikar-card::before {
+    content: '⚡';
+    position: absolute;
+    top: 12px;
+    right: 40px;
+    font-size: 28px;
+    filter: drop-shadow(0 0 10px rgba(0,102,255,0.8));
+  }
+
+  .card-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #0066ff;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .card-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(0,102,255,0.1);
+  }
+
+  .card-contact-item:last-of-type { border-bottom: none; }
+
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(0,102,255,0.15);
+    border: 1px solid rgba(0,102,255,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+
+  .contact-info strong {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .contact-info span {
+    font-size: 11px;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+
+  .emergency-badge {
+    margin-top: 28px;
+    background: rgba(255,50,50,0.1);
+    border: 1px solid rgba(255,50,50,0.3);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .emergency-badge .dot {
+    width: 8px;
+    height: 8px;
+    background: #ff3232;
+    border-radius: 50%;
+    animation: blink 1s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+  }
+
+  .emergency-badge span {
+    font-size: 12px;
+    color: #ff8888;
+    letter-spacing: 1px;
+  }
+
+  /* =========================================
+     BLOK 3 – INŠTALATÉR
+     Estetika: minimalistická, čistá, biela
+  ========================================= */
+  .instalater-section {
+    background: #ffffff;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .instalater-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 72px 60px;
+  }
+
+  /* header */
+  .instalater-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 72px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .instalater-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .instalater-logo-mark {
+    width: 44px;
+    height: 44px;
+    border: 1.5px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+
+  .instalater-logo-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #1a1a1a;
+    letter-spacing: -0.3px;
+  }
+
+  .instalater-logo-text small {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    color: #999;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-top: 1px;
+  }
+
+  .instalater-tagline {
+    font-size: 12px;
+    color: #999;
+    letter-spacing: 1px;
+  }
+
+  .instalater-tagline span {
+    color: #1a1a1a;
+    font-weight: 500;
+  }
+
+  /* hero grid */
+  .instalater-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    margin-bottom: 80px;
+  }
+
+  .instalater-eyebrow {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 20px;
+  }
+
+  .instalater-h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 4.5vw, 64px);
+    font-weight: 900;
+    line-height: 1.05;
+    color: #0f0f0f;
+    margin-bottom: 28px;
+    letter-spacing: -2px;
+  }
+
+  .instalater-h1 em {
+    font-style: italic;
+    color: #0f0f0f;
+  }
+
+  .instalater-desc {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 400px;
+  }
+
+  .instalater-cta-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .btn-water {
+    background: #0f0f0f;
+    color: #fff;
+    border: none;
+    padding: 15px 36px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .btn-water:hover { background: #333; }
+
+  .btn-outline-water {
+    color: #999;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .btn-outline-water:hover { color: #1a1a1a; border-color: #1a1a1a; }
+
+  /* right card */
+  .instalater-visual-card {
+    border: 1px solid #e8e8e8;
+    padding: 40px;
+    position: relative;
+  }
+
+  .instalater-visual-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: #0f0f0f;
+  }
+
+  .instalater-availability {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: #22c55e;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+
+  .availability-dot {
+    width: 6px;
+    height: 6px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: blink 1.5s ease-in-out infinite;
+  }
+
+  .instalater-price-row { margin-bottom: 32px; }
+
+  .price-label {
+    font-size: 10px;
+    color: #aaa;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .price-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: #0f0f0f;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+
+  .price-value small {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: #aaa;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .instalater-service-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 32px;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  .instalater-service-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #444;
+    padding: 11px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .instalater-service-list li::after {
+    content: '→';
+    color: #ccc;
+    font-size: 12px;
+  }
+
+  .instalater-review {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 24px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .review-avatar {
+    width: 36px;
+    height: 36px;
+    background: #0f0f0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 11px;
+    flex-shrink: 0;
+    letter-spacing: 0.5px;
+  }
+
+  .review-stars {
+    color: #0f0f0f;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+  }
+
+  .review-text {
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  /* features row */
+  .instalater-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid #e8e8e8;
+    border-left: 1px solid #e8e8e8;
+  }
+
+  .instalater-feature {
+    padding: 36px 28px;
+    border-right: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    transition: background 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .instalater-feature:hover { background: #fafafa; }
+
+  .feature-icon-wrap {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: border-color 0.2s;
+  }
+
+  .instalater-feature:hover .feature-icon-wrap { border-color: #1a1a1a; }
+
+  .feature-icon-wrap svg {
+    width: 16px;
+    height: 16px;
+    stroke: #1a1a1a;
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .feature-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f0f0f;
+    margin-bottom: 6px;
+    letter-spacing: -0.2px;
+  }
+
+  .feature-desc {
+    font-size: 12px;
+    color: #999;
+    line-height: 1.6;
+  }
+
+  /* contact row */
+  .instalater-contact-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid #e8e8e8;
+    border-left: 1px solid #e8e8e8;
+    margin-top: 0;
+  }
+
+  .instalater-contact-item {
+    padding: 28px;
+    border-right: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .contact-item-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #bbb;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .contact-item-value {
+    font-size: 15px;
+    font-weight: 500;
+    color: #0f0f0f;
+  }
+
+  .contact-item-sub {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 2px;
+  }
+
+  /* ===== TAB NAVIGATOR ===== */
+  .tab-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    background: #080808;
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  .tab-btn {
+    flex: 1;
+    padding: 20px 16px;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: #555;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 15px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .tab-btn span.tab-icon { font-size: 18px; }
+
+  .tab-btn:hover { color: #888; }
+
+  .tab-btn.active-stolar {
+    color: #f5e6d0;
+    border-bottom-color: #8B5A2B;
+    background: rgba(139,90,43,0.06);
+  }
+
+  .tab-btn.active-elektrikar {
+    color: #fff;
+    border-bottom-color: #0066ff;
+    background: rgba(0,102,255,0.06);
+  }
+
+  .tab-btn.active-instalater {
+    color: #0f172a;
+    border-bottom-color: #0ea5e9;
+    background: rgba(14,165,233,0.08);
+  }
+
+  /* panels */
+  .tab-panel {
+    display: none;
+    padding-top: 65px; /* nav height */
+  }
+
+  .tab-panel.active { display: block; }
+
+  /* dividers */
+  .section-divider {
+    display: none;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .stolar-section { grid-template-columns: 1fr; }
+    .stolar-right { display: none; }
+    .stolar-left { padding: 60px 32px; }
+    .elektrikar-hero { flex-direction: column; padding: 0 32px 60px; }
+    .elektrikar-hero-right { flex: none; width: 100%; }
+    .elektrikar-top { padding: 60px 32px 40px; flex-direction: column; gap: 24px; }
+    .elektrikar-nav { display: none; }
+    .instalater-inner { padding: 60px 32px; }
+    .instalater-hero { grid-template-columns: 1fr; gap: 40px; }
+    .instalater-features { grid-template-columns: repeat(2, 1fr); }
+    .instalater-contact-row { grid-template-columns: 1fr; }
+    .instalater-header { flex-direction: column; gap: 16px; text-align: center; }
+    .stolar-services { grid-template-columns: 1fr; }
+    .elektrikar-services-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== TAB NAVIGATION ===== -->
+<nav class="tab-nav">
+  <button class="tab-btn active-stolar" onclick="switchTab('stolar')" id="tab-stolar">
+    <span class="tab-icon">🪵</span> Stolár
+  </button>
+  <button class="tab-btn" onclick="switchTab('elektrikar')" id="tab-elektrikar">
+    <span class="tab-icon">⚡</span> Elektrikár
+  </button>
+  <button class="tab-btn" onclick="switchTab('instalater')" id="tab-instalater">
+    <span class="tab-icon">🔧</span> Inštalatér
+  </button>
+</nav>
+
+<!-- ===== STOLÁR ===== -->
+<div class="tab-panel active" id="panel-stolar">
+<section class="stolar-section">
+  <div class="stolar-left">
+    <span class="stolar-badge">Remeselná výroba · Od 2003</span>
+    <h1 class="stolar-title">Drevo<br><span>Hovorí</span><br>Samo</h1>
+    <p class="stolar-subtitle">Každý kus má svoju dušu.</p>
+    <p class="stolar-desc">
+      Vyrábame nábytok na mieru s láskou k materiálu a úctou k tradícii. Od masívnych jedálenských stolov po kuchynské linky – každý projekt je jedinečný.
+    </p>
+    <div class="stolar-services">
+      <div class="stolar-service-item">
+        <strong>Nábytok na mieru</strong>
+        <span>Masív aj dyha</span>
+      </div>
+      <div class="stolar-service-item">
+        <strong>Kuchynské linky</strong>
+        <span>Kompletná realizácia</span>
+      </div>
+      <div class="stolar-service-item">
+        <strong>Schodiská</strong>
+        <span>Dub, orech, buk</span>
+      </div>
+      <div class="stolar-service-item">
+        <strong>Reštaurovanie</strong>
+        <span>Starý nábytok</span>
+      </div>
+    </div>
+    <div class="stolar-cta">
+      <a href="#" class="btn-wood">Nezáväzná ponuka</a>
+      <a href="#" class="btn-ghost-wood">Naše práce →</a>
+    </div>
+  </div>
+  <div class="stolar-right">
+    <div class="stolar-visual">
+      <div class="wood-icon-large">🪵</div>
+      <div class="stolar-card">
+        <div class="stolar-card-name">Ján Kováčik</div>
+        <div class="stolar-card-title">Majster stolár · 20 rokov praxe</div>
+        <p class="stolar-card-quote">"Drevo nie je len materiál. Je to príbeh stromu, ktorý pokračuje vo vašom domove."</p>
+      </div>
+      <div class="stolar-stats">
+        <div class="stat-item">
+          <span class="stat-num">480+</span>
+          <span class="stat-label">Projektov</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">20</span>
+          <span class="stat-label">Rokov</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Masív</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div><!-- /panel-stolar -->
+
+<!-- ===== ELEKTRIKÁR ===== -->
+<div class="tab-panel" id="panel-elektrikar">
+<section class="elektrikar-section">
+  <div class="elektrikar-grid-bg"></div>
+  <div class="elektrikar-top">
+    <div class="elektrikar-logo-area">
+      <div class="elektrikar-bolt">⚡</div>
+      <div class="elektrikar-brand">
+        VoltPro
+        <small>Elektro · Služby</small>
+      </div>
+    </div>
+    <nav class="elektrikar-nav">
+      <a href="#">Služby</a>
+      <a href="#">Referencie</a>
+      <a href="#">O nás</a>
+      <a href="#" class="btn-electric">Kontakt</a>
+    </nav>
+  </div>
+  <div class="elektrikar-hero">
+    <div class="elektrikar-hero-text">
+      <div class="elektrikar-eyebrow">Certifikovaný elektrikár</div>
+      <h1 class="elektrikar-h1">
+        PRÚD<br>
+        <span class="accent">TEČIE</span><br>
+        U VÁS
+      </h1>
+      <p class="elektrikar-desc">
+        Elektroinštalácie pre rodinné domy, byty aj priemysel. Revízie, havarijný výjazd 24/7, smart home riešenia.
+      </p>
+      <div class="elektrikar-services-grid">
+        <div class="elek-service">
+          <div class="elek-service-icon">🏠</div>
+          <div class="elek-service-name">Inštalácie</div>
+          <div class="elek-service-tag">Rodinné domy</div>
+        </div>
+        <div class="elek-service">
+          <div class="elek-service-icon">🔍</div>
+          <div class="elek-service-name">Revízie</div>
+          <div class="elek-service-tag">ČSN normy</div>
+        </div>
+        <div class="elek-service">
+          <div class="elek-service-icon">📱</div>
+          <div class="elek-service-name">Smart Home</div>
+          <div class="elek-service-tag">KNX, Loxone</div>
+        </div>
+        <div class="elek-service">
+          <div class="elek-service-icon">⚡</div>
+          <div class="elek-service-name">Havarijný výjazd</div>
+          <div class="elek-service-tag">24 / 7</div>
+        </div>
+        <div class="elek-service">
+          <div class="elek-service-icon">☀️</div>
+          <div class="elek-service-name">Fotovoltika</div>
+          <div class="elek-service-tag">Montáž + revízia</div>
+        </div>
+        <div class="elek-service">
+          <div class="elek-service-icon">🔌</div>
+          <div class="elek-service-name">EV Nabíjanie</div>
+          <div class="elek-service-tag">Wallbox montáž</div>
+        </div>
+      </div>
+      <a href="#" class="btn-electric" style="display:inline-block; margin-top: 0;">Objednať termín</a>
+    </div>
+    <div class="elektrikar-hero-right">
+      <div class="elektrikar-card">
+        <div class="card-label">Kontaktujte nás</div>
+        <div class="card-contact-item">
+          <div class="contact-icon">📞</div>
+          <div class="contact-info">
+            <strong>0905 123 456</strong>
+            <span>Volajte kedykoľvek</span>
+          </div>
+        </div>
+        <div class="card-contact-item">
+          <div class="contact-icon">📧</div>
+          <div class="contact-info">
+            <strong>info@voltpro.sk</strong>
+            <span>Odpoveď do 2 hodín</span>
+          </div>
+        </div>
+        <div class="card-contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-info">
+            <strong>Banská Bystrica</strong>
+            <span>Okolie 50 km</span>
+          </div>
+        </div>
+        <div class="emergency-badge">
+          <div class="dot"></div>
+          <span>HAVARIJNÝ VÝJAZD — DOSTUPNÝ TERAZ</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div><!-- /panel-elektrikar -->
+
+<!-- ===== INŠTALATÉR ===== -->
+<div class="tab-panel" id="panel-instalater">
+<section class="instalater-section">
+  <div class="instalater-inner">
+
+    <!-- header -->
+    <div class="instalater-header">
+      <div class="instalater-logo">
+        <div class="instalater-logo-mark">
+          🔧
+        </div>
+        <div class="instalater-logo-text">
+          AquaFix
+          <small>Inštalatér · Kúrenie</small>
+        </div>
+      </div>
+      <div class="instalater-tagline">
+        <span>Záručný servis</span> &nbsp;·&nbsp; <span>Bez skrytých poplatkov</span> &nbsp;·&nbsp; <span>Výjazd do 24h</span>
+      </div>
+    </div>
+
+    <!-- hero -->
+    <div class="instalater-hero">
+      <div>
+        <div class="instalater-eyebrow">Voda · Kúrenie · Plyn</div>
+        <h1 class="instalater-h1">
+          Váš domov<br>v <em>dokonalej</em><br>pohode
+        </h1>
+        <p class="instalater-desc">
+          Profesionálna inštalácia a servis vodovodných rozvodov, kúrenia a plynoinštalácií. Pracujeme rýchlo, čisto a spoľahlivo.
+        </p>
+        <div class="instalater-cta-row">
+          <a href="#" class="btn-water">Zavolať teraz</a>
+          <a href="#" class="btn-outline-water">Naše referencie →</a>
+        </div>
+      </div>
+      <div>
+        <div class="instalater-visual-card">
+          <div class="instalater-availability">
+            <div class="availability-dot"></div>
+            Voľné termíny tento týždeň
+          </div>
+          <div class="instalater-price-row">
+            <div class="price-label">Výjazd od</div>
+            <div class="price-value">25 € <small>/ hodina</small></div>
+          </div>
+          <ul class="instalater-service-list">
+            <li>Oprava vodovodu a odpadov</li>
+            <li>Montáž kúpeľne na kľúč</li>
+            <li>Servis a montáž kotlov</li>
+            <li>Plynová revízia</li>
+            <li>Podlahové kúrenie</li>
+          </ul>
+          <div class="instalater-review">
+            <div class="review-avatar">MH</div>
+            <div>
+              <div class="review-stars">★ ★ ★ ★ ★</div>
+              <div class="review-text">"Rýchly výjazd, perfektná práca, čistota na pracovisku. Odporúčam všetkým!"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- features -->
+    <div class="instalater-features">
+      <div class="instalater-feature">
+        <div class="feature-icon-wrap">
+          <svg viewBox="0 0 24 24"><polyline points="13 2 13 9 20 9"/><path d="M20 14.5V7l-5-5H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h8"/><path d="m17 21 5-5-5-5"/><path d="m22 16-5 5"/></svg>
+        </div>
+        <div class="feature-title">Rýchly výjazd</div>
+        <div class="feature-desc">Do 24 hodín u vás, pri haváriách do 2 hodín</div>
+      </div>
+      <div class="instalater-feature">
+        <div class="feature-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="feature-title">Záruka 5 rokov</div>
+        <div class="feature-desc">Na všetky práce a použité materiály</div>
+      </div>
+      <div class="instalater-feature">
+        <div class="feature-icon-wrap">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="feature-title">Férová cena</div>
+        <div class="feature-desc">Cenová ponuka vopred, bez skrytých poplatkov</div>
+      </div>
+      <div class="instalater-feature">
+        <div class="feature-icon-wrap">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+        </div>
+        <div class="feature-title">15 rokov skúseností</div>
+        <div class="feature-desc">Viac ako 800 úspešne dokončených projektov</div>
+      </div>
+    </div>
+
+    <!-- contact -->
+    <div class="instalater-contact-row">
+      <div class="instalater-contact-item">
+        <div class="contact-item-label">Telefón</div>
+        <div class="contact-item-value">0905 123 456</div>
+        <div class="contact-item-sub">Volajte kedykoľvek</div>
+      </div>
+      <div class="instalater-contact-item">
+        <div class="contact-item-label">E-mail</div>
+        <div class="contact-item-value">info@aquafix.sk</div>
+        <div class="contact-item-sub">Odpoveď do 2 hodín</div>
+      </div>
+      <div class="instalater-contact-item">
+        <div class="contact-item-label">Lokalita</div>
+        <div class="contact-item-value">Banská Bystrica</div>
+        <div class="contact-item-sub">Okolie 50 km</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div><!-- /panel-instalater -->
+
+<script>
+function switchTab(name) {
+  // hide all panels
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  // deactivate all tabs
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    b.classList.remove('active-stolar', 'active-elektrikar', 'active-instalater');
+  });
+  // show selected
+  document.getElementById('panel-' + name).classList.add('active');
+  document.getElementById('tab-' + name).classList.add('active-' + name);
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>
